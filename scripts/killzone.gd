@@ -1,14 +1,15 @@
 extends Area2D
 
-
-@onready var animated_sprite_2d: AnimatedSprite2D
-func _ready():
-	print("AnimatedSprite2D:", animated_sprite_2d)  # Cek apakah null
+@onready var timer = $Timer
 
 func _on_body_entered(body: Node2D) -> void:
-	if body.name == "CharacterBody2D":
-		if animated_sprite_2d:
-			animated_sprite_2d.play("dead")
-		else:
-			print("ERROR: animated_sprite_2d is null!")
-		print("You Dead!")
+	
+	print("You Dead")
+	Engine.time_scale = 0.5
+	body.get_node("CollisionShape2D").queue_free()
+	timer.start()
+
+func _on_timer_timeout() -> void:
+	print("Restarting game...")
+	Engine.time_scale = 1.0
+	get_tree().reload_current_scene()

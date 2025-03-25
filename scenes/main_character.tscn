@@ -358,8 +358,10 @@ script = ExtResource("1_ig48j")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_jkv2x")
-animation = &"run"
+animation = &"dead"
 autoplay = "idle"
+frame = 6
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 2.5)
