@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://brm30nfn6yog7"]
+[gd_scene load_steps=18 format=3 uid="uid://brm30nfn6yog7"]
 
 [ext_resource type="Texture2D" uid="uid://cgg8cww4b4oxu" path="res://assets/Background/Brown.png" id="1_qwp14"]
 [ext_resource type="Texture2D" uid="uid://c1vk6foofgifk" path="res://assets/Terrain/Terrain (16x16).png" id="2_xpq2v"]
@@ -9,6 +9,7 @@
 [ext_resource type="FontFile" uid="uid://baw3wsso6ynu4" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="7_khw7m"]
 [ext_resource type="PackedScene" uid="uid://cv41otd11duvw" path="res://scenes/saw.tscn" id="8_xpq2v"]
 [ext_resource type="PackedScene" uid="uid://baukqmwr8y35w" path="res://scenes/killzone.tscn" id="9_0jmjk"]
+[ext_resource type="Texture2D" uid="uid://bgqswglbv10ut" path="res://assets/Traps/Saw/Chain.png" id="10_v8268"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jyhfs"]
 texture = ExtResource("2_xpq2v")
@@ -430,6 +431,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Saw" parent="." instance=ExtResource("8_xpq2v")]
+z_index = 2
 position = Vector2(1400, 534)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Saw"]
@@ -444,3 +446,347 @@ position = Vector2(-1080.99, -534)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Saw/KillZone"]
 position = Vector2(1081, 534)
 shape = SubResource("CircleShape2D_0jmjk")
+
+[node name="Chain" type="Node" parent="Saw"]
+
+[node name="Chain" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(876, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain2" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(891, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain3" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(906, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain4" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(921, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain5" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(936, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain6" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(951, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain7" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(966, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain8" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(981, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain9" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(996, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain10" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1011, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain11" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1026, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain12" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1041, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain13" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1056, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain14" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1071, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain15" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1086, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain16" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1101, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain17" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(636, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain18" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(651, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain19" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(666, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain20" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(681, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain21" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(696, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain22" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(711, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain23" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(726, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain24" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(741, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain25" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(756, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain26" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(771, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain27" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(786, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain28" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(801, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain29" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(816, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain30" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(831, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain31" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(846, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain32" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(861, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain33" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1251, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain34" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1266, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain35" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1281, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain36" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1296, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain37" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1311, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain38" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1326, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain39" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1341, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain40" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1356, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain41" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1371, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain42" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1386, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain43" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1401, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain44" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1416, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain45" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1431, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain46" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1446, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain47" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1461, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain48" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1476, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain56" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1116, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain57" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1131, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain58" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1146, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain59" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1161, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain60" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1176, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain61" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1191, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain62" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1206, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain63" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1221, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
+
+[node name="Chain64" type="Sprite2D" parent="Saw/Chain"]
+texture_filter = 1
+position = Vector2(1236, 534)
+scale = Vector2(3, 3)
+texture = ExtResource("10_v8268")
