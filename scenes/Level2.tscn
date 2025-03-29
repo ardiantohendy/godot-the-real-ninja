@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://brm30nfn6yog7"]
+[gd_scene load_steps=25 format=3 uid="uid://brm30nfn6yog7"]
 
 [ext_resource type="Texture2D" uid="uid://cgg8cww4b4oxu" path="res://assets/Background/Brown.png" id="1_qwp14"]
 [ext_resource type="Texture2D" uid="uid://c1vk6foofgifk" path="res://assets/Terrain/Terrain (16x16).png" id="2_xpq2v"]
@@ -384,19 +384,6 @@ _data = {
 &"saw_up&down": SubResource("Animation_rcugv")
 }
 
-[sub_resource type="GDScript" id="GDScript_o6xl0"]
-script/source = "extends Panel
-
-
-@onready var point_label = $Points
-var current_point = 0
-
-func add_point():
-	current_point += 1
-	point_label.text = \"Points = \" + str(current_point)
-	
-"
-
 [sub_resource type="Animation" id="Animation_khw7m"]
 resource_name = "move_saw3"
 loop_mode = 2
@@ -410,7 +397,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(3059, 534), Vector2(3613, 534)]
+"values": [Vector2(2961, 534), Vector2(3613, 534)]
 }
 
 [sub_resource type="Animation" id="Animation_wd6ad"]
@@ -434,6 +421,22 @@ _data = {
 &"move_saw3": SubResource("Animation_khw7m")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_v8268"]
+radius = 74.7985
+
+[sub_resource type="GDScript" id="GDScript_o6xl0"]
+script/source = "extends Panel
+
+
+@onready var point_label = $Points
+var current_point = 0
+
+func add_point():
+	current_point += 1
+	point_label.text = \"Points = \" + str(current_point)
+	
+"
+
 [node name="Node" type="Node"]
 
 [node name="SceneObjects" type="Node" parent="."]
@@ -455,7 +458,7 @@ layer_0/tile_data = PackedInt32Array(851968, 65536, 4, 851969, 65536, 4, 851970,
 
 [node name="CharacterBody2D" parent="SceneObjects" groups=["player"] instance=ExtResource("3_0jmjk")]
 z_index = 5
-position = Vector2(151, 239)
+position = Vector2(65, 281)
 
 [node name="Camera2D" type="Camera2D" parent="SceneObjects/CharacterBody2D"]
 position_smoothing_enabled = true
@@ -464,6 +467,123 @@ position_smoothing_enabled = true
 
 [node name="Collectable" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
 position = Vector2(329, 70)
+
+[node name="Collectable2" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(169, 407)
+
+[node name="Collectable3" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(3141, 597)
+
+[node name="Collectable4" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(3583, 595)
+
+[node name="Collectable5" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(275, 552)
+
+[node name="Collectable6" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(342, 552)
+
+[node name="Collectable7" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(357, 309)
+
+[node name="Collectable8" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(429, 167)
+
+[node name="Collectable9" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(505, 259)
+
+[node name="Collectable10" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(3047, 356)
+
+[node name="Collectable11" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(2619, 498)
+
+[node name="Collectable12" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(790, 353)
+
+[node name="Collectable13" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(980, 353)
+
+[node name="Collectable14" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(1175, 356)
+
+[node name="Collectable15" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(1368, 355)
+
+[node name="Collectable16" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(1167, 595)
+
+[node name="Collectable17" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(1302, 596)
+
+[node name="Collectable18" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(1302, 596)
+
+[node name="Collectable19" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(1430, 598)
+
+[node name="Collectable20" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(1538, 599)
+
+[node name="Collectable21" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(1665, 595)
+
+[node name="Collectable22" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(1538, 405)
+
+[node name="Collectable23" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(1610, 500)
+
+[node name="Collectable24" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(1805, 449)
+
+[node name="Collectable25" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(1872, 308)
+
+[node name="Collectable26" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(2018, 406)
+
+[node name="Collectable27" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(2163, 309)
+
+[node name="Collectable28" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(2157, 117)
+
+[node name="Collectable29" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(1872, 120)
+
+[node name="Collectable30" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(2017, 23)
+
+[node name="Collectable31" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(2018, 216)
+
+[node name="Collectable32" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(2282, 597)
+
+[node name="Collectable33" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(2327, 262)
+
+[node name="Collectable34" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(2472, 258)
+
+[node name="Collectable35" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(2658, 163)
+
+[node name="Collectable36" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(2905, 66)
+
+[node name="Collectable37" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(3237, 214)
+
+[node name="Collectable38" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(3432, 119)
+
+[node name="Collectable39" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(3431, 353)
+
+[node name="Collectable40" parent="SceneObjects/Cherry" instance=ExtResource("4_v8268")]
+position = Vector2(3573, 354)
 
 [node name="Trophy" parent="SceneObjects" instance=ExtResource("5_rcugv")]
 position = Vector2(709, -122)
@@ -846,6 +966,21 @@ position = Vector2(-1698.99, -344)
 position = Vector2(1698.99, 344)
 shape = SubResource("CircleShape2D_0jmjk")
 
+[node name="Saw3" parent="SceneObjects" instance=ExtResource("8_xpq2v")]
+position = Vector2(3059, 534)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SceneObjects/Saw3"]
+libraries = {
+&"": SubResource("AnimationLibrary_cd1f0")
+}
+autoplay = "move_saw3"
+
+[node name="KillZone" parent="SceneObjects/Saw3" instance=ExtResource("9_0jmjk")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SceneObjects/Saw3/KillZone"]
+visible = false
+shape = SubResource("CircleShape2D_v8268")
+
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("6_3aekd")
 
@@ -889,12 +1024,3 @@ theme_override_fonts/font = ExtResource("7_khw7m")
 text = "Points = 0"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Saw3" parent="." instance=ExtResource("8_xpq2v")]
-position = Vector2(3059, 534)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Saw3"]
-libraries = {
-&"": SubResource("AnimationLibrary_cd1f0")
-}
-autoplay = "move_saw3"
