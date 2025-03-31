@@ -1,0 +1,142 @@
+[gd_scene load_steps=9 format=3 uid="uid://cpu82owaak2h6"]
+
+[ext_resource type="Script" uid="uid://dflfb3ld801bl" path="res://scripts/main_menu.gd" id="1_tbmy8"]
+[ext_resource type="Texture2D" uid="uid://bjqgisg1nveg7" path="res://assets/Main Characters/Ninja Frog/Jump (32x32).png" id="2_8ln24"]
+[ext_resource type="Texture2D" uid="uid://dd4wtp4w7q1e" path="res://assets/Background/Pink.png" id="2_jk1qb"]
+[ext_resource type="Texture2D" uid="uid://7yh1j0tiqspn" path="res://assets/Main Characters/Mask Dude/Jump (32x32).png" id="3_rtw2f"]
+[ext_resource type="Texture2D" uid="uid://br00ax7pob1s6" path="res://assets/Main Characters/Pink Man/Jump (32x32).png" id="4_oa1go"]
+[ext_resource type="Texture2D" uid="uid://bq472w5lxa0d1" path="res://assets/Main Characters/Virtual Guy/Jump (32x32).png" id="5_tbmy8"]
+[ext_resource type="Texture2D" uid="uid://fcdbw6kn3g03" path="res://assets/Traps/Spike Head/Idle.png" id="7_5dd4i"]
+[ext_resource type="FontFile" uid="uid://baw3wsso6ynu4" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="8_lgwnu"]
+
+[node name="MainMenu" type="Node"]
+script = ExtResource("1_tbmy8")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 647.0
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 646.0
+texture = ExtResource("2_jk1qb")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="Frog" type="TextureRect" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 48.0
+offset_top = 394.0
+offset_right = 88.0
+offset_bottom = 434.0
+scale = Vector2(5, 5)
+texture = ExtResource("2_8ln24")
+
+[node name="MaskDude" type="TextureRect" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 927.0
+offset_top = 401.0
+offset_right = 967.0
+offset_bottom = 441.0
+scale = Vector2(5, 5)
+texture = ExtResource("3_rtw2f")
+flip_h = true
+
+[node name="PinkMan" type="TextureRect" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 797.0
+offset_top = 169.0
+offset_right = 837.0
+offset_bottom = 209.0
+scale = Vector2(5, 5)
+texture = ExtResource("4_oa1go")
+flip_h = true
+
+[node name="VirtualGuy" type="TextureRect" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 135.0
+offset_top = 164.0
+offset_right = 175.0
+offset_bottom = 204.0
+scale = Vector2(5, 5)
+texture = ExtResource("5_tbmy8")
+
+[node name="TextureRect2" type="TextureRect" parent="Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -226.0
+offset_top = -355.5
+offset_right = -172.0
+offset_bottom = -303.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(8, 8)
+texture = ExtResource("7_5dd4i")
+
+[node name="MarginContainer" type="MarginContainer" parent="Control"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 18.0
+offset_right = 68.0
+offset_bottom = 58.0
+
+[node name="Label" type="Label" parent="Control"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -513.0
+offset_top = -67.5
+offset_right = -309.0
+offset_bottom = -32.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(5, 5)
+theme_override_colors/font_color = Color(0.964706, 0.262745, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.678431, 0.254902, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("8_lgwnu")
+text = "THE REAL 
+NINJA"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 416.0
+offset_top = 433.0
+offset_right = 627.0
+offset_bottom = 551.0
+scale = Vector2(1.5, 1.5)
+alignment = 1
+
+[node name="Play" type="Button" parent="Control/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_lgwnu")
+text = "Play Game"
+
+[node name="Quit" type="Button" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("8_lgwnu")
+text = "Quit Gane
+"
+
+[connection signal="pressed" from="Control/VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
