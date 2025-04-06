@@ -5,6 +5,10 @@ const SPEED = 400.0
 const JUMP_VELOCITY = -900.0
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
+#jump when killing enemy
+func jump():
+	velocity.y = JUMP_VELOCITY
+	
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -33,11 +37,11 @@ func _physics_process(delta: float) -> void:
 		animated_sprite_2d.play("jump")
 		
 	
-	
 	if direction:
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, 40)
+		
 		
 	move_and_slide()
 	

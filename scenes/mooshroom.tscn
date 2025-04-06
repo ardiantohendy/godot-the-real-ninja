@@ -1,6 +1,7 @@
-[gd_scene load_steps=18 format=3 uid="uid://c8d17gls54d7e"]
+[gd_scene load_steps=20 format=3 uid="uid://c8d17gls54d7e"]
 
 [ext_resource type="Texture2D" uid="uid://7e1p5q1nwqlr" path="res://assets/Enemies/Mushroom/Idle (32x32).png" id="1_w04hc"]
+[ext_resource type="Script" uid="uid://c5x0nu0ilbrnf" path="res://scripts/mooshroom.gd" id="1_x5rin"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4dyl1"]
 atlas = ExtResource("1_w04hc")
@@ -111,7 +112,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gumju"]
 size = Vector2(52, 38)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w04hc"]
+size = Vector2(56, 41)
+
 [node name="Mooshroom" type="RigidBody2D"]
+script = ExtResource("1_x5rin")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
@@ -124,3 +129,14 @@ frame_progress = 0.809036
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 12)
 shape = SubResource("RectangleShape2D_gumju")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 10.5)
+shape = SubResource("RectangleShape2D_w04hc")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

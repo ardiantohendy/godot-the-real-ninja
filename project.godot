@@ -14,6 +14,9 @@ config/name="Second Game"
 run/main_scene="uid://cpu82owaak2h6"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
+run/stretch/aspect="expand"
+run/stretch/mode="canvas_items"
+run/defaults/default_clear_color=Color(0, 0, 0, 1)
 
 [display]
 
