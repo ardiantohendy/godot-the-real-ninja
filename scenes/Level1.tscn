@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://lqajeeugb813"]
+[gd_scene load_steps=12 format=3 uid="uid://lqajeeugb813"]
 
 [ext_resource type="Texture2D" uid="uid://de1dn1yv2o8c7" path="res://assets/Background/Green.png" id="1_0wfyh"]
 [ext_resource type="Texture2D" uid="uid://c1vk6foofgifk" path="res://assets/Terrain/Terrain (16x16).png" id="2_sugp2"]
 [ext_resource type="PackedScene" uid="uid://d2ekblqtwxfk1" path="res://scenes/main_character.tscn" id="3_sugp2"]
 [ext_resource type="PackedScene" uid="uid://ra20gpt20d73" path="res://scenes/collectable.tscn" id="4_jyhfs"]
 [ext_resource type="Script" uid="uid://ltd3pie3r6t6" path="res://scripts/game_manager.gd" id="5_tbgi4"]
+[ext_resource type="PackedScene" uid="uid://brm30nfn6yog7" path="res://scenes/Level2.tscn" id="6_ecr63"]
 [ext_resource type="PackedScene" uid="uid://ba8t5vcglw4vc" path="res://scenes/trophy.tscn" id="6_tefeu"]
 [ext_resource type="FontFile" uid="uid://baw3wsso6ynu4" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="7_o6xl0"]
 
@@ -336,6 +337,7 @@ position = Vector2(3304, 599)
 
 [node name="Trophy" parent="SceneObjects" instance=ExtResource("6_tefeu")]
 position = Vector2(709, -122)
+target_level = ExtResource("6_ecr63")
 
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("5_tbgi4")

@@ -2,6 +2,7 @@ extends Area2D
 
 
 @onready var game_manager = $"../../GameManager"
+@export var target_level : PackedScene
 
 func _ready() -> void:
 	if game_manager.points < 40:
@@ -21,4 +22,4 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.name == "CharacterBody2D":
 		queue_free()
 		print("You Win")
-		get_tree().reload_current_scene()
+		get_tree().change_scene_to_packed(target_level)

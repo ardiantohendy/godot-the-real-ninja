@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://brm30nfn6yog7"]
+[gd_scene load_steps=26 format=3 uid="uid://brm30nfn6yog7"]
 
 [ext_resource type="Texture2D" uid="uid://cgg8cww4b4oxu" path="res://assets/Background/Brown.png" id="1_qwp14"]
 [ext_resource type="Texture2D" uid="uid://c1vk6foofgifk" path="res://assets/Terrain/Terrain (16x16).png" id="2_xpq2v"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ra20gpt20d73" path="res://scenes/collectable.tscn" id="4_v8268"]
 [ext_resource type="PackedScene" uid="uid://ba8t5vcglw4vc" path="res://scenes/trophy.tscn" id="5_rcugv"]
 [ext_resource type="Script" uid="uid://ltd3pie3r6t6" path="res://scripts/game_manager.gd" id="6_3aekd"]
+[ext_resource type="PackedScene" uid="uid://cpu82owaak2h6" path="res://scenes/main_menu.tscn" id="6_rcugv"]
 [ext_resource type="FontFile" uid="uid://baw3wsso6ynu4" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="7_khw7m"]
 [ext_resource type="PackedScene" uid="uid://cv41otd11duvw" path="res://scenes/saw.tscn" id="8_xpq2v"]
 [ext_resource type="PackedScene" uid="uid://baukqmwr8y35w" path="res://scenes/killzone.tscn" id="9_0jmjk"]
@@ -587,6 +588,7 @@ position = Vector2(3573, 354)
 
 [node name="Trophy" parent="SceneObjects" instance=ExtResource("5_rcugv")]
 position = Vector2(709, -122)
+target_level = ExtResource("6_rcugv")
 
 [node name="Saw" parent="SceneObjects" instance=ExtResource("8_xpq2v")]
 z_index = 2

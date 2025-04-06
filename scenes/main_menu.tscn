@@ -135,7 +135,7 @@ text = "Play Game"
 [node name="Quit" type="Button" parent="Control/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("8_lgwnu")
-text = "Quit Gane
+text = "Quit Game
 "
 
 [connection signal="pressed" from="Control/VBoxContainer/Play" to="." method="_on_play_pressed"]
