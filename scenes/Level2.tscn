@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://brm30nfn6yog7"]
+[gd_scene load_steps=28 format=3 uid="uid://brm30nfn6yog7"]
 
 [ext_resource type="Texture2D" uid="uid://cgg8cww4b4oxu" path="res://assets/Background/Brown.png" id="1_qwp14"]
 [ext_resource type="Texture2D" uid="uid://c1vk6foofgifk" path="res://assets/Terrain/Terrain (16x16).png" id="2_xpq2v"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://baukqmwr8y35w" path="res://scenes/killzone.tscn" id="9_0jmjk"]
 [ext_resource type="Texture2D" uid="uid://bgqswglbv10ut" path="res://assets/Traps/Saw/Chain.png" id="10_v8268"]
 [ext_resource type="Texture2D" uid="uid://dqv5wj8s0yx7t" path="res://assets/heart/1.png" id="12_3aekd"]
+[ext_resource type="Script" uid="uid://bdvlkec2mcbjs" path="res://scripts/pause.gd" id="13_khw7m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jyhfs"]
 texture = ExtResource("2_xpq2v")
@@ -1069,3 +1070,79 @@ texture_filter = 1
 layout_mode = 2
 texture = ExtResource("12_3aekd")
 expand_mode = 2
+
+[node name="Pause" type="Node" parent="UI"]
+script = ExtResource("13_khw7m")
+
+[node name="PausePanel" type="Panel" parent="UI/Pause"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="UI/Pause/PausePanel"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -170.0
+offset_top = 193.0
+offset_bottom = 209.0
+grow_horizontal = 2
+scale = Vector2(2, 2)
+theme_override_fonts/font = ExtResource("7_khw7m")
+text = "GAME PAUSED"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/Pause/PausePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.0
+offset_top = -81.0
+offset_right = 50.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+alignment = 1
+
+[node name="Resume_Button" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
+process_mode = 3
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_khw7m")
+text = "Reasume Game"
+
+[node name="Restart_Button" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
+process_mode = 3
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_khw7m")
+text = "Restart Game"
+
+[node name="Menu_Button" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
+process_mode = 3
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_khw7m")
+text = "Main Menu"
+
+[node name="Quit_Button" type="Button" parent="UI/Pause/PausePanel/VBoxContainer"]
+process_mode = 3
+texture_filter = 1
+layout_mode = 2
+theme_override_fonts/font = ExtResource("7_khw7m")
+text = "Quit Game"
+
+[connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume_Button" to="UI/Pause" method="_on_resume_button_pressed"]
+[connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Restart_Button" to="UI/Pause" method="_on_restart_button_pressed"]
+[connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Menu_Button" to="UI/Pause" method="_on_menu_button_pressed"]
+[connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Quit_Button" to="UI/Pause" method="_on_quit_button_pressed"]
