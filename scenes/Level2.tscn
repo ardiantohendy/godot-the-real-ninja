@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://brm30nfn6yog7"]
+[gd_scene load_steps=27 format=3 uid="uid://brm30nfn6yog7"]
 
 [ext_resource type="Texture2D" uid="uid://cgg8cww4b4oxu" path="res://assets/Background/Brown.png" id="1_qwp14"]
 [ext_resource type="Texture2D" uid="uid://c1vk6foofgifk" path="res://assets/Terrain/Terrain (16x16).png" id="2_xpq2v"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cv41otd11duvw" path="res://scenes/saw.tscn" id="8_xpq2v"]
 [ext_resource type="PackedScene" uid="uid://baukqmwr8y35w" path="res://scenes/killzone.tscn" id="9_0jmjk"]
 [ext_resource type="Texture2D" uid="uid://bgqswglbv10ut" path="res://assets/Traps/Saw/Chain.png" id="10_v8268"]
+[ext_resource type="Texture2D" uid="uid://dqv5wj8s0yx7t" path="res://assets/heart/1.png" id="12_3aekd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jyhfs"]
 texture = ExtResource("2_xpq2v")
@@ -1007,7 +1008,7 @@ offset_right = 67.0
 offset_bottom = 24.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("7_khw7m")
-text = "Level 1"
+text = "Level 2"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -1026,3 +1027,45 @@ theme_override_fonts/font = ExtResource("7_khw7m")
 text = "Points = 0"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Hearts" type="Panel" parent="UI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -205.0
+offset_top = 23.0
+offset_right = -28.0
+offset_bottom = 78.0
+grow_horizontal = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/Hearts"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.5
+offset_top = -24.0
+offset_right = 81.5
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Heart" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("12_3aekd")
+expand_mode = 2
+
+[node name="Heart2" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("12_3aekd")
+expand_mode = 2
+
+[node name="Heart3" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("12_3aekd")
+expand_mode = 2
