@@ -386,6 +386,8 @@ shape = SubResource("WorldBoundaryShape2D_jxjwb")
 [node name="GameManager" type="Node" parent="."]
 script = ExtResource("5_tbgi4")
 
+[node name="Timer" type="Timer" parent="GameManager"]
+
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="UI"]
