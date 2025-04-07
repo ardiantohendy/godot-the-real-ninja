@@ -383,8 +383,9 @@ position = Vector2(510, 802)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SceneObjects/KillZone"]
 shape = SubResource("WorldBoundaryShape2D_jxjwb")
 
-[node name="GameManager" type="Node" parent="."]
+[node name="GameManager" type="Node" parent="." node_paths=PackedStringArray("hearts")]
 script = ExtResource("5_tbgi4")
+hearts = [NodePath("../UI/Hearts/HBoxContainer/Heart"), NodePath("../UI/Hearts/HBoxContainer/Heart2"), NodePath("../UI/Hearts/HBoxContainer/Heart3")]
 
 [node name="Timer" type="Timer" parent="GameManager"]
 

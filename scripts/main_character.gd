@@ -8,10 +8,11 @@ const JUMP_VELOCITY = -900.0
 #jump when killing enemy
 func jump():
 	velocity.y = JUMP_VELOCITY
-	
-func get_hit():
-	velocity.y = (JUMP_VELOCITY + 300)
-	
+
+#animation get hit
+func get_hit(x):
+	velocity.y = JUMP_VELOCITY
+	velocity.x = x
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
